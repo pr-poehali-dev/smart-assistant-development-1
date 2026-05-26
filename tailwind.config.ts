@@ -19,17 +19,18 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['DM Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-				display: ['Playfair Display', 'Georgia', 'serif'],
+				sans: ['Nunito', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				display: ['Syne', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				tropical: {
-					turquoise: '#2EC4C4',
-					peach: '#FFAA80',
-					grapefruit: '#FF6B6B',
-					coral: '#FF8C69',
-					mint: '#A8E6CF',
-					lavender: '#C3A6FF',
+					lime: '#C6FF00',
+					cyan: '#00E5FF',
+					magenta: '#FF2D78',
+					orange: '#FF6B00',
+					yellow: '#FFD600',
+					green: '#00C853',
+					purple: '#BF00FF',
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

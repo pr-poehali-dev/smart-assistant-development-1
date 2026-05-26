@@ -18,21 +18,26 @@ export default function Promo() {
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
-            src="https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/fa6eba0b-d03b-4030-987c-86e37eb3a887.jpg"
-            alt="Розы в саду"
+            src="https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/171322b9-c402-427c-b839-183b7cf5ad28.jpg"
+            alt="Тропический сад"
             className="w-full h-full object-cover"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(7,15,10,0.6) 0%, rgba(198,255,0,0.1) 100%)" }} />
       </div>
 
-      <h3 className="absolute top-12 right-6 uppercase z-10 text-sm md:text-base lg:text-lg font-sans font-light tracking-[0.3em]" style={{color: '#A8E6CF'}}>
-        Язык цветов
-      </h3>
+      <p
+        className="absolute top-12 left-6 font-display font-bold uppercase z-10 text-xs tracking-[0.5em]"
+        style={{ color: "#C6FF00" }}
+      >
+        Факт дня
+      </p>
 
-      <p className="absolute bottom-12 right-6 text-white font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10 italic leading-tight">
-        Розы говорят без слов. Красная — страсть, белая — чистота, жёлтая — дружба.
-        Выбери свою розу и передай то, что сложно выразить словами.
+      <p
+        className="absolute bottom-12 left-6 right-6 font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl z-10 leading-tight"
+        style={{ background: "linear-gradient(90deg, #fff 50%, #C6FF00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
+      >
+        На Земле более 400&thinsp;000 видов цветковых растений. Большинство живёт в тропиках.
       </p>
     </div>
   );
