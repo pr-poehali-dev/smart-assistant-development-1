@@ -55,6 +55,54 @@ const flowers = [
     accent: "#FF6B00",
     tag: "Борнео, Суматра",
   },
+  {
+    name: "Лотос",
+    subtitle: "Священный цветок",
+    description: "Растёт в грязи, но всплывает безупречно чистым — отсюда символ чистоты во всех восточных религиях. Семена живут 1000+ лет и всё равно прорастают.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/53822e2c-1c1f-49a6-9954-5022bd954317.jpg",
+    accent: "#FF2D78",
+    tag: "Азия, Австралия",
+  },
+  {
+    name: "Орхидея",
+    subtitle: "Королева джунглей",
+    description: "30 000 видов — больше, чем у птиц и млекопитающих вместе. Некоторые пахнут шоколадом, другие имитируют насекомых для опыления. Живёт до 100 лет.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/720bb2af-d99b-4ded-bc5a-9ddeae112d6b.jpg",
+    accent: "#BF00FF",
+    tag: "Тропики всего мира",
+  },
+  {
+    name: "Имбирный факел",
+    subtitle: "Живой огонь",
+    description: "Etlingera elatior — соцветие похоже на пламя факела. В Малайзии его едят в салатах и карри. Один из самых фотогеничных цветков Юго-Восточной Азии.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/0a0d986e-9d4c-4a50-91d5-0674117b261b.jpg",
+    accent: "#FF6B00",
+    tag: "Малайзия, Индонезия",
+  },
+  {
+    name: "Бругмансия",
+    subtitle: "Труба ангела",
+    description: "Огромные цветки-граммофоны свисают вниз и источают одурманивающий аромат к ночи. Всё растение ядовито. Использовалась шаманами в ритуалах.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/9b8facb6-f470-477a-82d6-16a7b64258cf.jpg",
+    accent: "#FFD600",
+    tag: "Южная Америка",
+  },
+  {
+    name: "Аморфофаллус",
+    subtitle: "Трупный цветок",
+    description: "Самое крупное соцветие на Земле — до 3 метров. Цветёт раз в 10 лет и всего 48 часов. В ботанических садах к нему выстраиваются очереди.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/44e112b9-cc1a-4dcf-82fc-610e8166f9f4.jpg",
+    accent: "#C6FF00",
+    tag: "Суматра",
+  },
+  {
+    name: "Бугенвиллея",
+    subtitle: "Взрыв цвета",
+    description: "Яркие «лепестки» — это листья-прицветники, а не цветки. Настоящие цветки крошечные и белые внутри. Покрывает стены и заборы по всем тропикам мира.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/819151cf-e5e2-46cb-809d-f1af4af82141.jpg",
+    accent: "#FF2D78",
+    tag: "Южная Америка",
+  },
 ];
 
 export default function Featured() {
@@ -74,14 +122,14 @@ export default function Featured() {
           Цветы, которые<br />взрывают мозг
         </h2>
         <p className="text-center mb-16 font-sans font-light" style={{ color: "rgba(255,255,255,0.45)" }}>
-          7 самых iconic цветков тропиков — факты, фото, атмосфера
+          13 самых iconic цветков тропиков — факты, фото, атмосфера
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {flowers.map((flower, i) => (
+          {flowers.map((flower) => (
             <div
               key={flower.name}
-              className={`group flex flex-col rounded-2xl overflow-hidden border transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl ${i === 6 ? "md:col-span-2 lg:col-span-1" : ""}`}
+              className="group flex flex-col rounded-2xl overflow-hidden border transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
               style={{ borderColor: "rgba(255,255,255,0.07)", background: "#0d1a10" }}
             >
               <div className="h-64 overflow-hidden relative">
