@@ -14,6 +14,7 @@ export default function Hero() {
       ref={container}
       className="relative flex items-center justify-center h-screen overflow-hidden"
     >
+      {/* Parallax фото */}
       <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
         <img
           src="https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/b7dca7c3-1693-4d7c-8eec-c1a44385bb72.jpg"
@@ -22,8 +23,63 @@ export default function Hero() {
         />
       </motion.div>
 
+      {/* Затемнение */}
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(7,15,10,0.55) 0%, rgba(7,15,10,0.15) 40%, rgba(7,15,10,0.75) 100%)" }} />
 
+      {/* Большая белая сетка — акцент справа */}
+      <div
+        className="absolute right-[-60px] top-1/2 -translate-y-1/2 w-[420px] h-[420px] pointer-events-none"
+        style={{ opacity: 0.07 }}
+      >
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+              <path d="M 42 0 L 0 0 0 42" fill="none" stroke="white" strokeWidth="1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      {/* Угловые акценты */}
+      <div className="absolute top-6 right-6 w-16 h-16 pointer-events-none" style={{ opacity: 0.35 }}>
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M64 0 H0 V0" stroke="#C6FF00" strokeWidth="2" />
+          <path d="M64 0 V64" stroke="#C6FF00" strokeWidth="2" />
+        </svg>
+      </div>
+      <div className="absolute bottom-6 left-6 w-16 h-16 pointer-events-none" style={{ opacity: 0.35 }}>
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 64 H64" stroke="#FF2D78" strokeWidth="2" />
+          <path d="M0 64 V0" stroke="#FF2D78" strokeWidth="2" />
+        </svg>
+      </div>
+
+      {/* Вертикальная подпись слева */}
+      <div
+        className="absolute left-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-4"
+        style={{ opacity: 0.4 }}
+      >
+        <div className="w-px h-16" style={{ background: "linear-gradient(to bottom, transparent, #C6FF00)" }} />
+        <p
+          className="font-display font-bold text-[10px] uppercase tracking-[0.4em] whitespace-nowrap"
+          style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", color: "#C6FF00" }}
+        >
+          Тропический гид
+        </p>
+        <div className="w-px h-16" style={{ background: "linear-gradient(to bottom, #C6FF00, transparent)" }} />
+      </div>
+
+      {/* Счётчик видов справа */}
+      <div
+        className="absolute right-6 bottom-24 hidden lg:flex flex-col items-center gap-2"
+        style={{ opacity: 0.5 }}
+      >
+        <p className="font-display font-extrabold text-4xl leading-none" style={{ color: "#fff" }}>13</p>
+        <p className="font-display font-bold text-[9px] uppercase tracking-[0.35em] text-center" style={{ color: "#C6FF00" }}>видов<br />в каталоге</p>
+      </div>
+
+      {/* Центральный контент */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <p
           className="font-display text-xs uppercase tracking-[0.5em] mb-5 font-semibold"
@@ -49,6 +105,12 @@ export default function Hero() {
             Смотреть цветы
           </a>
         </div>
+      </div>
+
+      {/* Скролл-подсказка снизу по центру */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style={{ opacity: 0.4 }}>
+        <div className="w-px h-10" style={{ background: "linear-gradient(to bottom, transparent, white)" }} />
+        <p className="font-display text-[9px] uppercase tracking-[0.4em]" style={{ color: "white" }}>Скролл</p>
       </div>
     </div>
   );
