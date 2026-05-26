@@ -2,8 +2,7 @@ const flowers = [
   {
     name: "Стрелиция",
     subtitle: "Птица рая",
-    description:
-      "Самый узнаваемый тропический цветок планеты. Оранжевые и синие лепестки похожи на экзотическую птицу в полёте. Родина — ЮАР, символ свободы и солнца.",
+    description: "Самый узнаваемый тропик-цветок планеты. Оранжево-синие лепестки похожи на экзотическую птицу в полёте. Символ свободы и солнца.",
     img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/0fa8895c-cf07-4980-9911-538d5be15b0b.jpg",
     accent: "#00E5FF",
     tag: "Южная Африка",
@@ -11,8 +10,7 @@ const flowers = [
   {
     name: "Гибискус",
     subtitle: "Цветок солнца",
-    description:
-      "Яркий, сочный, неудержимый. Гибискус — национальный цветок Малайзии и Гавайев. Цветёт всего один день, но делает это с максимальной отдачей.",
+    description: "Национальный цветок Малайзии и Гавайев. Живёт всего один день — но горит ярче всех. Чай из лепестков пьют от жары по всему миру.",
     img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/57f59a08-2b46-48c6-a8fe-20d8c70cf556.jpg",
     accent: "#FF2D78",
     tag: "Тропическая Азия",
@@ -20,11 +18,42 @@ const flowers = [
   {
     name: "Геликония",
     subtitle: "Омаровый коготь",
-    description:
-      "Огненные прицветники геликонии напоминают морских созданий. Живёт срезанной до 2 недель, не требует воды. Любимица флористов и тропических садов.",
+    description: "Огненные прицветники похожи на морских созданий. Стоит срезанной до 2 недель без воды. Любимица флористов и тропических садов.",
     img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/360de619-332c-4a99-8228-e037cf9b595f.jpg",
     accent: "#FF6B00",
     tag: "Центральная Америка",
+  },
+  {
+    name: "Антуриум",
+    subtitle: "Лакированное сердце",
+    description: "Глянцевый, почти пластиковый на вид — но настоящий. Один из самых долгоцветущих тропических растений: до 3 месяцев без остановки.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/6c1edde0-cd88-49bd-b1dc-5298bb5476ea.jpg",
+    accent: "#FF2D78",
+    tag: "Южная Америка",
+  },
+  {
+    name: "Плюмерия",
+    subtitle: "Аромат Гавайев",
+    description: "Из этих цветков плетут гавайские гирлянды-леи. Запах — смесь жасмина, персика и ванили. Один из самых вкусно пахнущих цветков на планете.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/287a9ab4-fd25-4568-9b7c-871b9d3f77c3.jpg",
+    accent: "#FFD600",
+    tag: "Центральная Америка",
+  },
+  {
+    name: "Пассифлора",
+    subtitle: "Пришелец из джунглей",
+    description: "Настолько геометрически точная, что кажется нарисованной. 500+ видов, и каждый выглядит как CGI. Плоды — маракуйя — едят по всему миру.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/dc74886c-fc5c-408f-be84-c9fedc29b712.jpg",
+    accent: "#BF00FF",
+    tag: "Южная Америка",
+  },
+  {
+    name: "Раффлезия",
+    subtitle: "Самый большой цветок",
+    description: "Диаметр до 1 метра, вес до 11 кг — рекорд для цветков. Не имеет стеблей и листьев, живёт как паразит. Пахнет гнилым мясом, чтобы привлекать мух.",
+    img: "https://cdn.poehali.dev/projects/e729de26-2bec-4653-b5f1-ab1b221d505a/files/9aee2f08-227c-4bf1-8299-5cd635dbee90.jpg",
+    accent: "#FF6B00",
+    tag: "Борнео, Суматра",
   },
 ];
 
@@ -45,14 +74,14 @@ export default function Featured() {
           Цветы, которые<br />взрывают мозг
         </h2>
         <p className="text-center mb-16 font-sans font-light" style={{ color: "rgba(255,255,255,0.45)" }}>
-          Три самых iconic цветка тропиков — факты, фото, атмосфера
+          7 самых iconic цветков тропиков — факты, фото, атмосфера
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {flowers.map((flower) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {flowers.map((flower, i) => (
             <div
               key={flower.name}
-              className="group flex flex-col rounded-2xl overflow-hidden border transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
+              className={`group flex flex-col rounded-2xl overflow-hidden border transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl ${i === 6 ? "md:col-span-2 lg:col-span-1" : ""}`}
               style={{ borderColor: "rgba(255,255,255,0.07)", background: "#0d1a10" }}
             >
               <div className="h-64 overflow-hidden relative">
